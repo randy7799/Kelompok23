@@ -25,7 +25,7 @@ class Bayar extends CI_Controller {
 	function edit(){
 		$this->load->model('model_bayar');
 		$no_faktur = $this->uri->segment(3);
-		$data['product'] = $this->model_buku->product($no_faktur)->row_array();
+		$data['product'] = $this->model_bayar->product($no_faktur)->row_array();
 
 		$this->load->view('v_edit_bayar',$data);
 	}
@@ -37,7 +37,7 @@ class Bayar extends CI_Controller {
 			'uang_bayar' =>$this->input->post('uang_bayar'),
 			'uang_kembali' =>$this->input->post('uang_kembali'));
 		$this->db->where('no_faktur',$id);
-		$this->db->insert('t_bayar',$databayar);
+		$this->db->update('t_bayar',$databayar);
 		redirect('bayar');
 	}
 
