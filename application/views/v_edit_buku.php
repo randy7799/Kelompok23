@@ -1,6 +1,6 @@
 <?php echo form_open('buku/edit_simpan'); ?>
 <?php echo form_hidden('id',$this->uri->segment(3)); ?>
-<table>
+<table class="table table-border">
 <tr>
 <td>Kode Buku</td> <td><?php echo form_input('kd_buku',$product['kd_buku'], array('placeholder'=>'kd_buku')) ;?></td>
 </tr>

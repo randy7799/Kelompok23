@@ -1,5 +1,5 @@
 <?php echo form_open('pelanggan/input_simpan'); ?>
-<table>
+<table class="table table-border">
 <tr>
 <td>Kode Pelanggan</td> <td><?php echo form_input('kd_pelanggan','', array('placeholder'=>'kd_pelanggan')) ;?></td>
 </tr>

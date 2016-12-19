@@ -1,7 +1,7 @@
 <?php echo $judul; ?>
 <?php echo anchor('pelanggan/input',' INPUT DATA PElANGGAN');?>
 <hr>
-<table border="1">
+<table class="table table-border">
 <tr><th>Kode Pelanggan</th><th>Nama Pelanggan</th><th> Alamat Pelanggan</th><th>Telpon Pelanggan</th><th colspan="2"></th></tr>
 
 <?php

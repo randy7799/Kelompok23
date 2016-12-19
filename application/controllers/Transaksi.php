@@ -34,7 +34,8 @@ class Transaksi extends CI_Controller {
 		$no_faktur = $this->uri->segment(3);
 		$data['product'] = $this->model_transaksi->product($no_faktur)->row_array();
 
-		$this->load->view('v_edit_transaksi',$data);
+		$this->template->load('template','v_edit_transaksi',$data);
+		//$this->load->view('v_edit_transaksi',$data);
 	}
 
 	function edit_simpan(){

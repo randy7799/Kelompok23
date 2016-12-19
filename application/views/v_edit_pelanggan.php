@@ -1,6 +1,6 @@
 <?php echo form_open('pelanggan/edit_simpan'); ?>
 <?php echo form_hidden('id',$this->uri->segment(3)); ?>
-<table>
+<table class="table table-border">
 <tr>
 <td>Kode Pelanggan</td> <td><?php echo form_input('kd_pelanggan',$product['kd_pelanggan'], array('placeholder'=>'kd_pelanggan')) ;?></td>
 </tr>

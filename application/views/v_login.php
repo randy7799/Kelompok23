@@ -7,7 +7,7 @@
 
 <body>
 <form action="<?php echo base_url('login/aksi_login');?>" method="post">
-	<table>
+	<table class="table table-border">
     	<tr>
         	<td>Username</td>
             <td><input type="text" name="username" /></td>

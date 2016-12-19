@@ -1,6 +1,6 @@
 <?php echo form_open('transaksi/input_simpan'); ?>
 
-<table>
+<table class="table table-border">
 <tr>
 <td>No Faktur</td> <td><?php echo form_input('no_faktur','', array('placeholder'=>'no_faktur')) ;?></td>
 </tr>

@@ -1,6 +1,6 @@
 <?php echo form_open('buku/input_simpan'); ?>
 
-<table>
+<table class="table table-border">
 <tr>
 <td>Kode Buku</td> <td><?php echo form_input('kd_buku','', array('placeholder'=>'kd_buku')) ;?></td>
 </tr>

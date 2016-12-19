@@ -1,7 +1,7 @@
 <?php echo $judul; ?>
 <?php echo anchor('transaksi/input',' INPUT DATA TRANSAKSI');?>
 <hr>
-<table border="1">
+<table class="table table-border">
 <tr><th>No Faktur</th><th>Tanggal</th><th>Kode Pelanggan</th><th>Id User</th><th>Biaya Kirim</th><th>Total Bayar</th><th colspan="2"></th></tr>
 
 <?php

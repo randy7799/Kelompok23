@@ -10,7 +10,8 @@ class Pelanggan extends CI_Controller {
 	}
 
 	function input(){
-		$this->load->view('v_input_pelanggan');
+		$this->load->view('template','v_input_pelanggan');
+		//$this->load->view('v_input_pelanggan');
 	}
 
 	function input_simpan(){
