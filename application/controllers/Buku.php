@@ -6,11 +6,11 @@ class Buku extends CI_Controller {
 		$judul 		= "Daftar Buku";
 		$data['judul'] 	= $judul;
 		$data['buku'] = $this->model_buku->list_buku()->result();
-		$this->load->view('list_buku',$data);
+		$this->template->load('template','list_buku',$data);
 	}
 
 	function input(){
-		$this->load->view('v_input_buku');
+		$this->template->load('template','v_input_buku');
 	}
 
 	function input_simpan(){
@@ -34,7 +34,8 @@ class Buku extends CI_Controller {
 		$kd_buku = $this->uri->segment(3);
 		$data['product'] = $this->model_buku->product($kd_buku)->row_array();
 
-		$this->load->view('v_edit_buku',$data);
+		$this->template->load('template','v_edit_buku',$data);
+		//$this->load->view('v_edit_buku',$data);
 	}
 
 	function edit_simpan(){

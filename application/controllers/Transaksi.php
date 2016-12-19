@@ -6,11 +6,14 @@ class Transaksi extends CI_Controller {
 		$judul 		= "Daftar Transaksi";
 		$data['judul'] 	= $judul;
 		$data['transaksi'] = $this->model_transaksi->list_transaksi()->result();
-		$this->load->view('list_transaksi',$data);
+
+		$this->template->load('template','list_transaksi',$data);
+		//$this->load->view('list_transaksi',$data);
 	}
 
 	function input(){
-		$this->load->view('v_input_transaksi');
+		$this->template->load('template','v_input_transaksi');
+		//$this->load->view('v_input_transaksi');
 	}
 
 	function input_simpan(){

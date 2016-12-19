@@ -6,11 +6,13 @@ class Detail extends CI_Controller {
 		$judul 		= "Daftar Detail";
 		$data['judul'] 	= $judul;
 		$data['detail'] = $this->model_detail->list_detail()->result();
-		$this->load->view('list_detail',$data);
+		$this->template->load('template','list_detail',$data);
+		//$this->load->view('list_detail',$data);
 	}
 
 	function input(){
-		$this->load->view('v_input_detail');
+		$this->template->load('template','v_input_detail');
+		//$this->load->view('v_input_detail');
 	}
 
 	function input_simpan(){
@@ -28,8 +30,8 @@ class Detail extends CI_Controller {
 		$this->load->model('model_detail');
 		$no_faktur = $this->uri->segment(3);
 		$data['product'] = $this->model_detail->product($no_faktur)->row_array();
-
-		$this->load->view('v_edit_detail',$data);
+		$this->template->load('template','v_edit_detail',$data);
+		//$this->load->view('v_edit_detail',$data);
 	}
 
 	function edit_simpan(){

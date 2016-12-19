@@ -5,7 +5,8 @@ class Pelanggan extends CI_Controller {
 		$judul 		= "Daftar pelanggan";
 		$data['judul'] 	= $judul;
 		$data['pelanggan'] = $this->model_pelanggan->list_pelanggan()->result();
-		$this->load->view('list_pelanggan',$data);
+		$this->template->load('template','list_pelanggan',$data);
+		//$this->load->view('list_pelanggan',$data);
 	}
 
 	function input(){
@@ -28,7 +29,8 @@ class Pelanggan extends CI_Controller {
 		$kd_pelanggan = $this->uri->segment(3);
 		$data['product'] = $this->model_pelanggan->product($kd_pelanggan)->row_array();
 
-		$this->load->view('v_edit_pelanggan',$data);
+		$this->template->load('template','v_edit_pelanggan',$data);
+		//$this->load->view('v_edit_pelanggan',$data);
 	}
 
 	function edit_simpan(){
