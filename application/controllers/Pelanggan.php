@@ -1,6 +1,6 @@
 <?php
 class Pelanggan extends CI_Controller {
-	chek_session();
+
 		function index() {
 		$this->load->model('model_pelanggan');
 		$judul 		= "Daftar pelanggan";
@@ -11,7 +11,9 @@ class Pelanggan extends CI_Controller {
 	}
 
 	function input(){
-		$this->template->load('template','v_input_pelanggan');
+		$judul 		= "Input Pelanggan";
+		$data['judul'] 	= $judul;
+		$this->template->load('template','v_input_pelanggan',$data);
 		//$this->load->view('v_input_pelanggan');
 	}
 
@@ -27,6 +29,8 @@ class Pelanggan extends CI_Controller {
 	}
 
 	function edit(){
+		$judul 		= "Edit Pelanggan";
+		$data['judul'] 	= $judul;
 		$this->load->model('model_pelanggan');
 		$kd_pelanggan = $this->uri->segment(3);
 		$data['product'] = $this->model_pelanggan->product($kd_pelanggan)->row_array();

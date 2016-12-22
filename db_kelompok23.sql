@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 18, 2016 at 07:27 PM
+-- Generation Time: Dec 22, 2016 at 01:29 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -72,26 +72,6 @@ INSERT INTO `t_buku` (`kd_buku`, `judul_buku`, `jenis_buku`, `karang_buku`, `ter
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_detail`
---
-
-CREATE TABLE `t_detail` (
-  `no_faktur` varchar(10) NOT NULL,
-  `kd_buku` varchar(6) NOT NULL,
-  `jumlah_beli` int(4) NOT NULL,
-  `total_harga` decimal(8,0) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `t_detail`
---
-
-INSERT INTO `t_detail` (`no_faktur`, `kd_buku`, `jumlah_beli`, `total_harga`) VALUES
-('F000000001', 'KB0001', 2, '106760');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `t_pelanggan`
 --
 
@@ -121,6 +101,8 @@ CREATE TABLE `t_transaksi` (
   `tgl_faktur` date NOT NULL,
   `kd_pelanggan` varchar(6) NOT NULL,
   `id_user` varchar(4) NOT NULL,
+  `kd_buku` varchar(6) NOT NULL,
+  `jumlah_beli` int(4) NOT NULL,
   `biaya_kirim` decimal(8,0) NOT NULL,
   `total_bayar` decimal(8,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -129,8 +111,8 @@ CREATE TABLE `t_transaksi` (
 -- Dumping data for table `t_transaksi`
 --
 
-INSERT INTO `t_transaksi` (`no_faktur`, `tgl_faktur`, `kd_pelanggan`, `id_user`, `biaya_kirim`, `total_bayar`) VALUES
-('F000000001', '2016-12-17', 'K00001', 'A001', '30000', '136760');
+INSERT INTO `t_transaksi` (`no_faktur`, `tgl_faktur`, `kd_pelanggan`, `id_user`, `kd_buku`, `jumlah_beli`, `biaya_kirim`, `total_bayar`) VALUES
+('F000000001', '2016-12-17', 'K00001', 'A001', 'KB0001', 2, '30000', '136760');
 
 -- --------------------------------------------------------
 
@@ -144,15 +126,16 @@ CREATE TABLE `t_user` (
   `type_user` varchar(15) NOT NULL,
   `telpon_user` int(20) NOT NULL,
   `alamat_user` varchar(20) NOT NULL,
-  `password_user` varchar(6) NOT NULL
+  `password_user` varchar(32) NOT NULL,
+  `last_login` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `t_user`
 --
 
-INSERT INTO `t_user` (`id_user`, `nama_user`, `type_user`, `telpon_user`, `alamat_user`, `password_user`) VALUES
-('A001', 'root', 'root', 87733882, 'jl.alamat no 24', 'gulden');
+INSERT INTO `t_user` (`id_user`, `nama_user`, `type_user`, `telpon_user`, `alamat_user`, `password_user`, `last_login`) VALUES
+('A001', 'Admin', 'Admin', 988222111, 'jl sepak ads', '63a9f0ea7bb98050796b649e85481845', '2016-12-21');
 
 --
 -- Indexes for dumped tables

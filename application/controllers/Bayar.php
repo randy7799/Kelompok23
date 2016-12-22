@@ -1,7 +1,7 @@
 <?php
 class Bayar extends CI_Controller {
 
-	chek_session();
+
 		function index() {
 		$this->load->model('model_bayar');
 		$judul 		= "Daftar Bayar";
@@ -12,7 +12,9 @@ class Bayar extends CI_Controller {
 	}
 
 	function input(){
-		$this->template->load('template','v_input_bayar');
+		$judul 		= "Input Bayar";
+		$data['judul'] 	= $judul;
+		$this->template->load('template','v_input_bayar',$data);
 		//$this->load->view('v_input_bayar');
 	}
 
@@ -27,6 +29,8 @@ class Bayar extends CI_Controller {
 	}
 
 	function edit(){
+		$judul 		= "Edit Bayar";
+		$data['judul'] 	= $judul;
 		$this->load->model('model_bayar');
 		$no_faktur = $this->uri->segment(3);
 		$data['product'] = $this->model_bayar->product($no_faktur)->row_array();

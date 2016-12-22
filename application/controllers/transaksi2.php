@@ -4,7 +4,7 @@ class Transaksi2 extends ci_controller{
         function __construct() {
         parent::__construct();
         $this->load->model(array('model_barang','model_transaksi'));
-        chek_session();
+
     }
 
     function index()

@@ -1,10 +1,10 @@
 <?php
 class Buku extends CI_Controller {
-	
+
 	function __construct(){
 		parent::__construct();
 		$this->load->model('model_buku');
-		chek_session();
+
 	}
 
 	function index() {
@@ -16,7 +16,9 @@ class Buku extends CI_Controller {
 	}
 
 	function input(){
-		$this->template->load('template','v_input_buku');
+		$judul 		= "Input Buku";
+		$data['judul'] 	= $judul;
+		$this->template->load('template','v_input_buku',$data);
 	}
 
 	function input_simpan(){
@@ -36,6 +38,8 @@ class Buku extends CI_Controller {
 	}
 
 	function edit(){
+		$judul 		= "Edit Buku";
+		$data['judul'] 	= $judul;
 		$this->load->model('model_buku');
 		$kd_buku = $this->uri->segment(3);
 		$data['product'] = $this->model_buku->product($kd_buku)->row_array();
@@ -45,6 +49,7 @@ class Buku extends CI_Controller {
 	}
 
 	function edit_simpan(){
+
 		$id = $this->input->post('id');
 		$databuku = array (
 			'kd_buku' =>$this->input->post('kd_buku'),
@@ -58,6 +63,7 @@ class Buku extends CI_Controller {
 			'foto' =>$this->input->post('foto'));
 		$this->db->where('kd_buku',$id);
 		$this->db->update('t_buku',$databuku);
+
 		redirect('buku');
 	}
 

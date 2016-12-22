@@ -9,16 +9,16 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Point Of Salles Application</title>
+    <title>23Book Admin</title>
 
     <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/datepicker3.css"/>
 
     <link href="navbar-static-top.css" rel="stylesheet">
 
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="<?php echo base_url();?>assets/js/ie-emulation-modes-warning.js"></script>
 
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="<?php echo base_url();?>assets/js/ie10-viewport-bug-workaround.js"></script>
 
   </head>
 

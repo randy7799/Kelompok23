@@ -1,6 +1,6 @@
 <?php
 class Transaksi extends CI_Controller {
-chek_session();
+
 	function index() {
 		$this->load->model('model_transaksi');
 		$judul 		= "Daftar Transaksi";
@@ -12,7 +12,9 @@ chek_session();
 	}
 
 	function input(){
-		$this->template->load('template','v_input_transaksi');
+		$judul 		= "Input Transaksi";
+		$data['judul'] 	= $judul;
+		$this->template->load('template','v_input_transaksi',$data);
 		//$this->load->view('v_input_transaksi');
 	}
 
@@ -32,6 +34,8 @@ chek_session();
 	}
 
 	function edit(){
+		$judul 		= "Edit Transaksi";
+		$data['judul'] 	= $judul;
 		$this->load->model('model_transaksi');
 		$no_faktur = $this->uri->segment(3);
 		$data['product'] = $this->model_transaksi->product($no_faktur)->row_array();

@@ -1,3 +1,5 @@
+<h3><?php echo $judul; ?></h3>
+<h3><?php echo $judul; ?></h3>
 <?php echo form_open('buku/input_simpan'); ?>
 
 <table class="table table-bordered">
@@ -40,7 +42,6 @@
 <?php echo form_submit('submit','SIMPAN DATA','class="btn btn-primary"');?>
 <?php echo anchor('buku', 'KEMBALI',array('class' =>'btn btn-primary' )); ?>
 </td></tr>
-
 
 </table>
 

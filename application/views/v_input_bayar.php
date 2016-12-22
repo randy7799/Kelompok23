@@ -1,3 +1,4 @@
+<h3><?php echo $judul; ?></h3>
 <?php echo form_open('bayar/input_simpan'); ?>
 <table class="table table-bordered">
 <tr>

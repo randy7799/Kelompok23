@@ -9,15 +9,15 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>23Book Shop</title>
+    <title>23Book</title>
 
     <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="navbar-static-top.css" rel="stylesheet">
 
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="<?php echo base_url();?>assets/js/ie-emulation-modes-warning.js"></script>
 
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="<?php echo base_url();?>ssets/js/ie10-viewport-bug-workaround.js"></script>
 
   </head>
 
@@ -33,17 +33,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Point Of Sales</a>
+          <a class="navbar-brand" href="#">23Book</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><?php echo anchor('buku','Data Buku');?></li>
-            <li><?php echo anchor('transaksi','Data Transaksi');?></li>
-            <li><?php echo anchor('pelanggan','Data Pelanggan');?></li>
-            <li><?php echo anchor('bayar','Data Pembayaran');?></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-              <li class="acttive"><?php echo anchor('auth/logout','Logout');?></li></li>
+            <li class="active"><?php echo anchor('ubuku','Data Buku');?></li>
+            <li><?php echo anchor('upembelian','Pembelian');?></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

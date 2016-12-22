@@ -1,4 +1,6 @@
-<?php echo $judul; ?>
+<h3>
+	<?php echo $judul; ?>
+</h3>
 <?php echo anchor('detail/input',' INPUT DATA DETAIL');?>
 <hr>
 <table class="table table-bordered">

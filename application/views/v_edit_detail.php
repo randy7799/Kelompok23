@@ -1,3 +1,4 @@
+<h3><?php echo $judul; ?></h3>
 <?php echo form_open('detail/edit_simpan'); ?>
 <?php echo form_hidden('id',$this->uri->segment(3)); ?>
 <table class="table table-bordered">
