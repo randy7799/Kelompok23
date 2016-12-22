@@ -1,7 +1,7 @@
 <?php echo $judul; ?>
 <?php echo anchor('detail/input',' INPUT DATA DETAIL');?>
 <hr>
-<table class="table table-border">
+<table class="table table-bordered">
 <tr><th>No Faktur</th><th>Kode Buku</th><th> Jumlah Beli</th><th>Total Harga</th><th colspan="2"></th></tr>
 
 <?php

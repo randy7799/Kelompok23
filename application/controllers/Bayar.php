@@ -1,16 +1,18 @@
 <?php
 class Bayar extends CI_Controller {
+
+	chek_session();
 		function index() {
 		$this->load->model('model_bayar');
 		$judul 		= "Daftar Bayar";
 		$data['judul'] 	= $judul;
 		$data['bayar'] = $this->model_bayar->list_bayar()->result();
-		$this->template->load('template','list_bayar',$data)
+		$this->template->load('template','list_bayar',$data);
 		//$this->load->view('list_bayar',$data);
 	}
 
 	function input(){
-		$this->template->load('template','v_input_bayar')
+		$this->template->load('template','v_input_bayar');
 		//$this->load->view('v_input_bayar');
 	}
 
@@ -28,7 +30,7 @@ class Bayar extends CI_Controller {
 		$this->load->model('model_bayar');
 		$no_faktur = $this->uri->segment(3);
 		$data['product'] = $this->model_bayar->product($no_faktur)->row_array();
-		$this->template->load('template','list_bayar',$data)
+		$this->template->load('template','list_bayar',$data);
 		//$this->load->view('v_edit_bayar',$data);
 	}
 

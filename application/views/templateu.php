@@ -9,10 +9,9 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Point Of Salles Application</title>
+    <title>23Book Shop</title>
 
     <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/datepicker3.css"/>
 
     <link href="navbar-static-top.css" rel="stylesheet">
 
@@ -63,14 +62,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?php echo base_url()?>assets/js/jquery.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url()?>assets/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#tanggal').datepicker({
-            format: "dd-mm-yyyy",
-            autoclose:true
-        });
-    });
-</script>
   </body>
 </html>

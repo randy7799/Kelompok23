@@ -1,7 +1,7 @@
 <?php echo $judul; ?>
 <?php echo anchor('buku/input',' INPUT DATA BUKU');?>
 <hr>
-<table class="table table-border">
+<table class="table table-bordered">
 <tr><th>Kode Buku</th><th>Judul</th><th> Jenis</th><th>Karangan</th><th>Terbitan</th><th>Tahun Terbit</th><th>Harga</th><th>Stok</th><th>Foto</th><th colspan="2"></th></tr>
 
 <?php

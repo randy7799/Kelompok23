@@ -1,6 +1,6 @@
 <?php
 class Transaksi extends CI_Controller {
-
+chek_session();
 	function index() {
 		$this->load->model('model_transaksi');
 		$judul 		= "Daftar Transaksi";
@@ -22,6 +22,8 @@ class Transaksi extends CI_Controller {
 			'tgl_faktur' =>$this->input->post('tgl_faktur'),
 			'kd_pelanggan' =>$this->input->post('kd_pelanggan'),
 			'id_user' =>$this->input->post('id_user'),
+			'kd_buku' =>$this->input->post('kd_buku'),
+			'jumlah_beli' =>$this->input->post('jumlah_beli'),
 			'biaya_kirim' =>$this->input->post('biaya_kirim'),
 			'total_bayar' =>$this->input->post('total_bayar'));
 
@@ -45,6 +47,8 @@ class Transaksi extends CI_Controller {
 			'tgl_faktur' =>$this->input->post('tgl_faktur'),
 			'kd_pelanggan' =>$this->input->post('kd_pelanggan'),
 			'id_user' =>$this->input->post('id_user'),
+			'kd_buku' =>$this->input->post('kd_buku'),
+			'jumlah_beli' =>$this->input->post('jumlah_beli'),
 			'biaya_kirim' =>$this->input->post('biaya_kirim'),
 			'total_bayar' =>$this->input->post('total_bayar'));
 		$this->db->where('no_faktur',$id);

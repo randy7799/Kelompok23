@@ -1,8 +1,8 @@
 <?php echo $judul; ?>
 <?php echo anchor('transaksi/input',' INPUT DATA TRANSAKSI');?>
 <hr>
-<table class="table table-border">
-<tr><th>No Faktur</th><th>Tanggal</th><th>Kode Pelanggan</th><th>Id User</th><th>Biaya Kirim</th><th>Total Bayar</th><th colspan="2"></th></tr>
+<table class="table table-bordered">
+<tr><th>No Faktur</th><th>Tanggal</th><th>Kode Pelanggan</th><th>Id User</th><th>Kode Buku</th><th>jumlah beli</th><th>Biaya Kirim</th><th>Total Bayar</th><th colspan="2"></th></tr>
 
 <?php
 foreach ($transaksi as $t){
@@ -11,6 +11,8 @@ foreach ($transaksi as $t){
 	<td>$t->tgl_faktur</td>
 	<td>$t->kd_pelanggan</td>
 	<td>$t->id_user</td>
+	<td>$t->kd_buku</td>
+	<td>$t->jumlah_beli</td>
 	<td>$t->biaya_kirim</td>
 	<td>$t->total_bayar</td>
 	<td>".anchor('transaksi/edit/'.$t->no_faktur,'EDIT')."</td>

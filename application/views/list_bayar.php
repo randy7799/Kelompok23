@@ -1,7 +1,7 @@
 <?php echo $judul; ?>
 <?php echo anchor('bayar/input',' INPUT DATA BAYAR');?>
 <hr>
-<table border="1">
+<table class="table table-bordered">
 <tr><th>No Faktur</th><th>Uang Bayar</th><th> Uang Kembali</th><th colspan="2"></th></tr>
 
 <?php

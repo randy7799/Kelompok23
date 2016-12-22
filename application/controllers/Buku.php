@@ -1,5 +1,11 @@
 <?php
 class Buku extends CI_Controller {
+	
+	function __construct(){
+		parent::__construct();
+		$this->load->model('model_buku');
+		chek_session();
+	}
 
 	function index() {
 		$this->load->model('model_buku');

@@ -37,15 +37,6 @@
           <a class="navbar-brand" href="#">Point Of Sales</a>
         </div>
         <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><?php echo anchor('buku','Data Buku');?></li>
-            <li><?php echo anchor('transaksi','Data Transaksi');?></li>
-            <li><?php echo anchor('pelanggan','Data Pelanggan');?></li>
-            <li><?php echo anchor('bayar','Data Pembayaran');?></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-              <li class="acttive"><?php echo anchor('auth/logout','Logout');?></li></li>
-          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
