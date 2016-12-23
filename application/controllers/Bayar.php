@@ -34,7 +34,7 @@ class Bayar extends CI_Controller {
 		$this->load->model('model_bayar');
 		$no_faktur = $this->uri->segment(3);
 		$data['product'] = $this->model_bayar->product($no_faktur)->row_array();
-		$this->template->load('template','list_bayar',$data);
+		$this->template->load('template','v_edit_bayar',$data);
 		//$this->load->view('v_edit_bayar',$data);
 	}
 

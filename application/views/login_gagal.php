@@ -16,6 +16,7 @@ echo form_open('auth/validasi');
  <tr>
    <td colspan="2"><button type="submit" name="submit" class="">Login</button></td>
  </tr>
+ <h3><?php echo "Password / User Salah"?></h3>
 
  </table>
  </form>

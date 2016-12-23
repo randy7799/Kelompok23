@@ -35,7 +35,7 @@
 </tr>
 
 <tr>
-<td>Foto</td><td> <?php echo form_input('foto',$product['foto'], array('placeholder'=>'foto')) ;?> </td>
+<td>Search</td><td> <?php echo form_input('search',$product['search'], array('placeholder'=>'search','class' => 'form-control')) ;?> </td>
 </tr>
 <tr><td colspan='2'>
 <?php echo form_submit('submit','SIMPAN DATA','class="btn btn-primary"');?>

@@ -1,60 +1,40 @@
 <?php
-class model_transaksi extends ci_model
+class Model_transaksi2 extends ci_model
 {
-    
-    
-    function simpan_barang()
+
+
+    function simpan_buku()
     {
-        $nama_barang    =  $this->input->post('barang');
+        $judul_buku    =  $this->input->post('t_buku');
         $qty            =  $this->input->post('qty');
-        $idbarang       = $this->db->get_where('barang',array('nama_barang'=>$nama_barang))->row_array();
-        $data           = array('barang_id'=>$idbarang['barang_id'],
+        $kd_buku       = $this->db->get_where('t_buku',array('judul_buku'=>$judul_buku))->row_array();
+        $data           = array('kd_buku'=>$kd_buku['kd_buku'],
                                 'qty'=>$qty,
-                                'harga'=>$idbarang['harga'],
+                                'harga'=>$kd_buku['harga'],
                                 'status'=>'0');
-        $this->db->insert('transaksi_detail',$data);
+        $this->db->insert('t_dstran',$data);
     }
-    
+
     function tampilkan_detail_transaksi()
     {
-        $query  ="SELECT td.t_detail_id,td.qty,td.harga,b.nama_barang
-                FROM transaksi_detail as td,barang as b
-                WHERE b.barang_id=td.barang_id and td.status='0'";
+        $query  ="SELECT td.dstran_id,td.qty,b.harga_buku,b.judul_buku
+                FROM t_dstran as td,t_buku as b
+                WHERE b.kd_buku=td.kd_buku and td.status='0'";
         return $this->db->query($query);
     }
-    
+
     function hapusitem($id)
     {
-        $this->db->where('t_detail_id',$id);
-        $this->db->delete('transaksi_detail');
+        $this->db->where('t_dstran',$id);
+        $this->db->delete('t_stran');
     }
-    
-    
+
+
     function selesai_belanja($data)
     {
-        $this->db->insert('transaksi',$data);
-        $last_id=  $this->db->query("select transaksi_id from transaksi order by transaksi_id desc")->row_array();
-        $this->db->query("update transaksi_detail set transaksi_id='".$last_id['transaksi_id']."' where status='0'");
-        $this->db->query("update transaksi_detail set status='1' where status='0'");
-    }
-    
-    
-    function laporan_default()
-    {
-        $query="SELECT t.tanggal_transaksi,o.nama_lengkap,sum(td.harga*td.qty) as total
-                FROM transaksi as t,transaksi_detail as td,operator as o
-                WHERE td.transaksi_id=t.transaksi_id and o.operator_id=t.operator_id
-                group by t.transaksi_id";
-        return $this->db->query($query);
-    }
-    
-    function laporan_periode($tanggal1,$tanggal2)
-    {
-        $query="SELECT t.tanggal_transaksi,o.nama_lengkap,sum(td.harga*td.qty) as total
-                FROM transaksi as t,transaksi_detail as td,operator as o
-                WHERE td.transaksi_id=t.transaksi_id and o.operator_id=t.operator_id 
-                and t.tanggal_transaksi between '$tanggal1' and '$tanggal2'
-                group by t.transaksi_id";
-        return $this->db->query($query);
+        $this->db->insert('t_stran',$data);
+        $last_id=  $this->db->query("select stran_id from t_stran order by stran_id desc")->row_array();
+        $this->db->query("update t_dstran set stran_id='".$last_id['stran_id']."' where status='0'");
+        $this->db->query("update t_dstran set status='1' where status='0'");
     }
 }

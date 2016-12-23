@@ -17,7 +17,7 @@
 
     <script src="<?php echo base_url();?>assets/js/ie-emulation-modes-warning.js"></script>
 
-    <script src="<?php echo base_url();?>ssets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="<?php echo base_url();?>assets/js/ie10-viewport-bug-workaround.js"></script>
 
   </head>
 
@@ -38,7 +38,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><?php echo anchor('ubuku','Data Buku');?></li>
-            <li><?php echo anchor('upembelian','Pembelian');?></li>
+            <li><?php echo anchor('about','Tentang Kami');?></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

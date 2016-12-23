@@ -1,5 +1,4 @@
 <h3><?php echo $judul; ?></h3>
-<h3><?php echo $judul; ?></h3>
 <?php echo form_open('buku/input_simpan'); ?>
 
 <table class="table table-bordered">
@@ -36,7 +35,7 @@
 </tr>
 
 <tr>
-<td>Foto</td><td> <?php echo form_input('foto','', array('placeholder'=>'foto','class' => 'form-control')) ;?> </td>
+<td>Foto</td><td> <?php echo form_input('search','', array('placeholder'=>'search','class' => 'form-control')) ;?> </td>
 </tr>
 <tr><td colspan='2'>
 <?php echo form_submit('submit','SIMPAN DATA','class="btn btn-primary"');?>

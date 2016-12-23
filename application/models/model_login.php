@@ -1,11 +1,12 @@
 <?php
-class Model_login extends CI_Model {
-	function login($nama_user,$password_user){
-		$chek = $this->db->get_where('t_user',array('nama_user'=>$nama_user,'password_user'=>md5($password_user)));
-		if($chek->num_rows()>0){
-			return 1;
-		}else {
-			return 0;
-		}
+class Model_login extends CI_Model{
+	function __construct(){
+		$this->load->database(); // Berfungsi untuk memanggil database
+	}
+
+	// Berfungsi untuk mengambil data pada tabel user yang ada di database kita
+	function ambil_data($data){
+		$user = $this->db->get_where('t_user',$data);
+		return $user->num_rows();
 	}
 }

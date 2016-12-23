@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Point Of Salles Application</title>
+    <title>23Book Login</title>
 
     <link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/datepicker3.css"/>
@@ -34,7 +34,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Point Of Sales</a>
+          <a class="navbar-brand" href="#">23Book Admin</a>
         </div>
         <div class="navbar-collapse collapse">
         </div><!--/.nav-collapse -->

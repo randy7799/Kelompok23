@@ -1,6 +1,13 @@
 <?php
 class Upembelian extends CI_Controller {
 
+	function __construct()
+{
+		parent::__construct();
+		$this->load->helper(array('url', 'form'));
+		$this->load->library(array('form_validation', 'Recaptcha'));
+}
+
 
 		function index() {
 		$this->load->model('model_upembelian');
@@ -11,5 +18,6 @@ class Upembelian extends CI_Controller {
 		$this->template->load('templateu','list_upembelian',$data);
 
 	}
+
 }
 ?>

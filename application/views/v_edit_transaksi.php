@@ -28,11 +28,11 @@
 </tr>
 
 <tr>
-<td>Biaya Kirim</td> <td><?php echo form_input('biaya_kirim',$product['biaya_kirim'], array('placeholder'=>'biaya_kirim')) ;?></td>
+<td>Biaya Kirim</td> <td><?php echo form_input('biaya_kirim',$product['biaya_kirim'], array('placeholder'=>'biaya_kirim','class' => 'form-control')) ;?></td>
 </tr>
 
 <tr>
-<td>Total Bayar</td> <td><?php echo form_input('total_bayar',$product['total_bayar'], array('placeholder'=>'total_bayar')) ;?></td>
+<td>Total Bayar</td> <td><?php echo form_input('total_bayar',$product['total_bayar'], array('placeholder'=>'total_bayar','class' => 'form-control')) ;?></td>
 </tr>
 
 <tr><td colspan='2'>
