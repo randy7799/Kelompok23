@@ -40,6 +40,9 @@
             <li class="active"><?php echo anchor('ubuku','Data Buku');?></li>
             <li><?php echo anchor('about','Tentang Kami');?></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li class="acttive"><?php echo anchor('auth','Login');?></li></li>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>

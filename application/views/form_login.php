@@ -1,3 +1,4 @@
+<h3>Login </h3>
 <?php echo validation_errors(); ?>
 <?php
 echo form_open('auth/validasi');
@@ -14,7 +15,7 @@ echo form_open('auth/validasi');
    <td><input class="form-control" type="password" name="password_user"></td>
  </tr>
  <tr>
-   <td colspan="2"><button type="submit" name="submit" class="">Login</button></td>
+   <td colspan="2"><button type="submit" name="submit" class="btn btn-default">Login</button></td>
  </tr>
 
  </table>
